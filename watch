@@ -1,0 +1,4 @@
+#!/bin/bash
+
+jade --watch *src/jade/*.jade --out "." &
+sass --watch ./src/scss:./css &
