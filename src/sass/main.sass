@@ -1,0 +1,40 @@
+body 
+  font-size: 16px
+
+#contentArea 
+  padding: 0
+  overflow: hidden
+
+.slider > img
+  z-index: 7
+  position: absolute
+  width: 10rem
+  top: 20%
+  
+.slides li
+  background: black
+
+.slider .slides img
+  opacity: .3
+
+.slides .caption
+  top: unset !important
+  bottom: 10% !important
+  
+#navArea
+  z-index: 5
+  background-color: white
+  position: fixed
+  @media screen and (min-width: 601px)
+    position: static
+  
+.row 
+  margin-bottom: 0
+  
+.slider,
+.slides,
+li
+  height: 100vh !important
+  
+
+  
