@@ -1,18 +1,93 @@
+* {
+  box-sizing: border-box; }
+
 body {
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: #fcfcfc; }
 
 #contentArea {
   padding: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  width: auto;
+  float: none; }
 
-.slider > img {
+.social {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  color: white; }
+  .social i:first-child {
+    margin-right: 20px; }
+  @media screen and (min-width: 601px) {
+    .social {
+      left: unset;
+      bottom: unset;
+      top: 0;
+      right: 0; } }
+
+.logo-wrapper img {
+  display: inline;
+  margin-right: 1rem;
+  vertical-align: middle; }
+  @media screen and (min-width: 360px) {
+    .logo-wrapper img {
+      width: 3rem; } }
+  @media screen and (min-width: 601px) {
+    .logo-wrapper img {
+      width: 5rem; } }
+
+.logo-wrapper b {
+  display: inline;
+  font-size: 3rem;
+  color: white;
+  vertical-align: middle; }
+  @media screen and (min-width: 601px) {
+    .logo-wrapper b {
+      font-size: 5rem; } }
+
+.logo-wrapper {
+  display: block;
   z-index: 7;
   position: absolute;
-  width: 10rem;
-  top: 20%; }
+  width: 220px;
+  top: 20%;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
+  @media screen and (min-width: 601px) {
+    .logo-wrapper {
+      top: 40%;
+      width: 390px; } }
 
 .slides li {
   background: black; }
+
+.navWrapper {
+  width: 260px;
+  margin: 0 auto; }
+  @media screen and (min-width: 360px) {
+    .navWrapper {
+      width: 350px; } }
+  @media screen and (min-width: 601px) {
+    .navWrapper {
+      display: inline; } }
+
+.navCon {
+  display: inline-block;
+  padding: 10px 10px; }
+  @media screen and (min-width: 360px) {
+    .navCon {
+      padding: 10px 21px; } }
+  @media screen and (min-width: 414px) {
+    .navCon {
+      padding: 10px 21px; } }
+  @media screen and (min-width: 601px) {
+    .navCon {
+      display: block;
+      padding: 10px 10px;
+      text-align: center; } }
 
 .slider .slides img {
   opacity: 0.3; }
@@ -23,11 +98,16 @@ body {
 
 #navArea {
   z-index: 5;
-  background-color: white;
-  position: fixed; }
+  background-color: #006699;
+  position: fixed;
+  padding: 0; }
   @media screen and (min-width: 601px) {
     #navArea {
-      position: static; } }
+      position: static;
+      height: 100vh; } }
+  @media screen and (min-width: 1000px) {
+    #navArea {
+      width: 80px; } }
 
 .row {
   margin-bottom: 0; }

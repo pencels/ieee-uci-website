@@ -1,19 +1,88 @@
+$sm-phone-width: 360px
+$lg-phone-width: 414px
+$tablet-pc-width: 601px
+
+*
+  box-sizing: border-box
+
 body 
   font-size: 16px
+  background-color: #fcfcfc
 
 #contentArea 
   padding: 0
   overflow: hidden
+  width: auto
+  float: none
+  
+.social
+  position: absolute
+  z-index: 10
+  bottom: 0
+  left: 0
+  padding: 20px
+  color: white
+  i:first-child
+    margin-right: 20px
+  @media screen and (min-width: $tablet-pc-width)
+    left: unset
+    bottom: unset
+    top: 0
+    right: 0
 
-.slider > img
+.logo-wrapper img
+  display: inline
+  margin-right: 1rem
+  vertical-align: middle
+  @media screen and (min-width: $sm-phone-width)
+    width: 3rem
+  @media screen and (min-width: $tablet-pc-width)
+    width: 5rem
+
+.logo-wrapper b
+  display: inline
+  font-size: 3rem
+  color: white
+  vertical-align: middle
+  @media screen and (min-width: $tablet-pc-width)
+    font-size: 5rem
+  
+.logo-wrapper
+  display: block 
   z-index: 7
   position: absolute
-  width: 10rem
+  width: 220px
   top: 20%
+  margin: 0 auto
+  left: 0
+  right: 0
+  @media screen and (min-width: $tablet-pc-width)
+    top: 40%
+    width: 390px  
   
 .slides li
   background: black
+  
+.navWrapper
+  width: 260px
+  margin: 0 auto
+  @media screen and (min-width: $sm-phone-width)
+    width: 350px
+  @media screen and (min-width: $tablet-pc-width)
+    display: inline
 
+.navCon 
+  display: inline-block
+  padding: 10px 10px
+  @media screen and (min-width: $sm-phone-width)
+    padding: 10px 21px
+  @media screen and (min-width: $lg-phone-width)
+    padding: 10px 21px
+  @media screen and (min-width: $tablet-pc-width)
+    display: block
+    padding: 10px 10px
+    text-align: center
+    
 .slider .slides img
   opacity: .3
 
@@ -23,10 +92,14 @@ body
   
 #navArea
   z-index: 5
-  background-color: white
+  background-color: #006699
   position: fixed
-  @media screen and (min-width: 601px)
+  padding: 0
+  @media screen and (min-width: $tablet-pc-width)
     position: static
+    height: 100vh
+  @media screen and (min-width: 1000px)
+    width: 80px
   
 .row 
   margin-bottom: 0
