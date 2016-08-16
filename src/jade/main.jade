@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+  head
+    title pageTitle
+    meta(name="viewport" content="initial-scale=1")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css", rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css", rel="stylesheet")
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", rel="stylesheet")
+    link(href="./css/main.css", rel="stylesheet")
+   
+    script(src="https://code.jquery.com/jquery-3.1.0.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js")
+    script(src="./js/main.js")
+    
+  body
+    .social
+      i.fa.fa-twitter(aria-hidden=true)
+      i.fa.fa-facebook(aria-hidden=true)
+  
+    .row 
+      .col.s12.m1.l1#navArea
+        .navWrapper
+          .navCon(href="")
+            i.fa.fa-home.fa-2x(aria-hidden=true)
+          .navCon
+            a(href="/map.html"): i.fa.fa-map-marker.fa-2x(aria-hidden=true)
+          .navCon 
+            i.fa.fa-user.fa-2x(aria-hidden=true)
+          .navCon 
+            i.fa.fa-ticket.fa-2x(aria-hidden=true)
+          .navCon
+            i.fa.fa-heart.fa-2x(aria-hidden=true)
+          
+      
+      .col.s12.m11.l11#contentArea
+        .slider
+          .logo-wrapper
+            img(src="./img/ieeelogo.svg") 
+            b IEEE UCI
+          
+          
+          ul.slides
+            -
+              var mystic = ["Academic", "We invite companies for infosession"]
+              var valor = ["Social", "We go clubbing"]
+              var instinct = ["Creativity", "We hosts workshops"]
+            
+            each value, key in {'./img/libraryImage.jpg':mystic, './img/socialScene.jpg':valor, './img/nerdWorkshop.jpg':instinct}
+              li
+                img(src=key) 
+                .caption.right-align 
+                  h3 #{value[0]}
+                    h5.light.grey-text.text-lighten-3 #{value[1]}
+                
+
